@@ -6,12 +6,12 @@ const ApproachSection = () => {
   const { ref: imgRef, offset } = useParallax(0.15);
 
   return (
-    <section className="bg-background px-8 py-24 md:px-16 lg:py-32">
-      <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 md:gap-16 items-center">
-        {/* Image with parallax */}
-        <div ref={imgRef} className="relative overflow-hidden aspect-[3/4]">
+    <section className="bg-background px-8 pt-0 pb-24 md:px-16 lg:pb-32">
+      <div className="mx-auto max-w-6xl">
+        {/* Landscape image */}
+        <div ref={imgRef} className="relative overflow-hidden aspect-[16/7] w-full mb-16">
           <img
-            src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80"
+            src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1600&q=80"
             alt="Wedding photography approach"
             className="h-full w-full object-cover grayscale transition-transform duration-300 hover:scale-105"
             style={{ transform: `translateY(${offset}px) scale(1.1)` }}
@@ -19,13 +19,13 @@ const ApproachSection = () => {
           />
         </div>
 
-        {/* Text content */}
+        {/* Text content — centered below image */}
         <div
           ref={textRef}
-          className="transition-all duration-700 ease-out"
+          className="mx-auto max-w-3xl text-center transition-all duration-700 ease-out"
           style={{
             opacity: isVisible ? 1 : 0,
-            transform: isVisible ? 'translateX(0)' : 'translateX(40px)',
+            transform: isVisible ? 'translateY(0)' : 'translateY(40px)',
           }}
         >
           <p className="mb-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">

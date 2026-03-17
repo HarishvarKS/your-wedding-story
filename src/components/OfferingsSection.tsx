@@ -1,12 +1,12 @@
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
-const tags = ['Weddings', 'Engagements', 'Destinations', 'Families', 'Commercials'];
+const tags = ['Weddings', 'Engagements', 'Destinations', 'Portraits', 'Commercials'];
 
 const OfferingsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="bg-primary px-8 py-24 text-primary-foreground md:px-16 lg:py-32">
+    <section className="bg-primary px-8 py-12 text-primary-foreground md:px-16 lg:py-16">
       <div
         ref={ref}
         className="mx-auto max-w-4xl text-center transition-all duration-700 ease-out"
